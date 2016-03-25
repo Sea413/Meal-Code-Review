@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
 import {Food} from './food.model';
 
-@omponent({
+@Component({
   selector: 'edit-food-details',
   inputs: ['food'],
   template: `
@@ -14,6 +14,6 @@ import {Food} from './food.model';
       <input [(ngModel)]="food.calories" class="col-sm-8 input-lg food-form"
   `
 })
-export class EditFoodDetailsComponent {
+export class EditFoodComponent {
   public food: Food;
 }

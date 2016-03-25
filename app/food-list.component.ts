@@ -2,7 +2,7 @@ import { Component, EventEmitter } from 'angular2/core';
 import { FoodComponent } from './food.component';
 import { Food } from './food.model';
 import { EditFoodComponent } from './edit.component';
-import { HeavyPipe } from './calory.pipe';
+import { HeavyPipe } from './heavy.pipe';
 import { NewFoodComponent } from './new-food.component';
 
 @Component ({
@@ -10,7 +10,7 @@ import { NewFoodComponent } from './new-food.component';
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
   pipes: [HeavyPipe],
-  directives [FoodComponent, EditFoodComponent, NewFoodComponent]
+  directives: [FoodComponent, EditFoodComponent, NewFoodComponent],
   template: `
   <select (change)="onChange($event.target.value)"
     <option value="all">Show All</option>
