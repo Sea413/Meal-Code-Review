@@ -28,9 +28,6 @@ System.register(['angular2/core', './food.model'], function(exports_1, context_1
                 NewFoodComponent.prototype.addFood = function (name, description, calories) {
                     var tempFood = new food_model_1.Food(name.value, description.value, parseInt(calories.value), 0);
                     this.onSubmitNewFood.emit(tempFood);
-                    name.value = "";
-                    description.value = "";
-                    calories.value = "";
                 };
                 NewFoodComponent = __decorate([
                     core_1.Component({

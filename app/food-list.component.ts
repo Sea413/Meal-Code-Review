@@ -15,7 +15,7 @@ import { NewFoodComponent } from './new-food.component';
   <select (change)="onChange($event.target.value)">
     <option value="all">Show All</option>
     <option value="heavy">Show Heavy Food</option>
-    <option value="notHeavy">Lite Food</option>
+    <option value="notHeavy">Show Lite Food</option>
   </select>
   <food-display *ngFor="#currentFood of foodList | heavy:filterHeavy"
     (click)="foodClicked(currentFood)"

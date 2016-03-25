@@ -9,6 +9,9 @@ import {HeavyPipe} from './heavy.pipe';
   inputs: ['food','foodList'],
   template: `
     <div class="food-form">
+    <h4>Name: {{ food.name }},</h4>
+    <h4>Description: {{ food.description }},</h4>
+    <h4>Calories: {{ food.calories }},</h4>
       <h3>Edit Name:</h3>
       <input [(ngModel)]="food.name" class="col-sm-8 input-lg food-form" />
       <h3>Edit Description: </h3>

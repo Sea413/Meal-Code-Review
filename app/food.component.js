@@ -25,7 +25,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'food-display',
                         inputs: ['food'],
-                        template: "\n  <div>\n    <label>Food Name: {{food.name}}, </label>\n    <label> Food Description: {{food.description}}, </label>\n    <label>Calory Count: {{food.calories}} </label>\n  </div>\n  "
+                        template: "\n  <div>\n    <label>Food Name: {{food.name}} </label>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], FoodComponent);

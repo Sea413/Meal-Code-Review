@@ -32,7 +32,9 @@ System.register(['angular2/core', './food-list.component', './food.model'], func
                         new food_model_1.Food("Scone", "We do not actually know if this is a scone", 1000, 2),
                         new food_model_1.Food("Cheesecake", "Vegan", 2500, 3)
                     ];
-                    console.log(this.foods);
+                    for (var i = 0; i < this.foods.length; i++) {
+                        console.log(this.foods[i].name);
+                    }
                 }
                 AppComponent.prototype.foodWasSelected = function (clickedFood) {
                     console.log('parent', clickedFood);

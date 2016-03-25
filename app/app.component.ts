@@ -24,7 +24,9 @@ export class AppComponent {
       new Food("Scone","We do not actually know if this is a scone", 1000,2),
       new Food("Cheesecake","Vegan",2500,3)
     ];
-    console.log(this.foods);
+    for(var i = 0; i < this.foods.length; i++) {
+    console.log(this.foods[i].name);
+  }
   }
   foodWasSelected(clickedFood: Food): void {
     console.log('parent', clickedFood);

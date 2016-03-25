@@ -6,9 +6,7 @@ import { Food } from './food.model';
   inputs: ['food'],
   template: `
   <div>
-    <label>Food Name: {{food.name}}, </label>
-    <label> Food Description: {{food.description}}, </label>
-    <label>Calory Count: {{food.calories}} </label>
+    <label>Food Name: {{food.name}} </label>
   </div>
   `
 })
