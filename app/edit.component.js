@@ -21,11 +21,17 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             EditFoodComponent = (function () {
                 function EditFoodComponent() {
                 }
+                EditFoodComponent.prototype.changeStatus = function (setCalories) {
+                    this.food.calories = setCalories;
+                    if (setCalories > 300) {
+                        this.food.heavy = true;
+                    }
+                };
                 EditFoodComponent = __decorate([
                     core_1.Component({
                         selector: 'edit',
                         inputs: ['food', 'foodList'],
-                        template: "\n    <div class=\"food-form\">\n    <h4>Name: {{ food.name }},</h4>\n    <h4>Description: {{ food.description }},</h4>\n    <h4>Calories: {{ food.calories }},</h4>\n      <h3>Edit Name:</h3>\n      <input [(ngModel)]=\"food.name\" class=\"col-sm-8 input-lg food-form\" />\n      <h3>Edit Description: </h3>\n      <input [(ngModel)]=\"food.description\" class=\"col-sm-8 input-lg food-form\" />\n      <h3>Edit Calories: </h3>\n      <input [(ngModel)]=\"food.calories\" class=\"col-sm-8 input-lg food-form\" />\n  "
+                        template: "\n  <div class=\"food-form\">\n    <h4>Name: {{ food.name }},</h4>\n    <h4>Description: {{ food.description }},</h4>\n    <h4>Calories: {{ food.calories }}</h4>\n    <h3>Edit Name:</h3>\n    <input [(ngModel)]=\"food.name\" class=\"col-sm-8 input-lg food-form\" />\n\n    <h3>Edit Description: </h3>\n    <input [(ngModel)]=\"food.description\" class=\"col-sm-8 input-lg food-form\" />\n\n    <h3>Edit Calories: </h3>\n    <input [(ngModel)]=\"food.calories\" class=\"col-sm-8 input-lg food-form\" />\n\n      <button (click)=\"changeStatus(food.calories)\"> Confirm Edit</button>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], EditFoodComponent);
