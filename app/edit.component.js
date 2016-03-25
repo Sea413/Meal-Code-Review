@@ -23,9 +23,9 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 }
                 EditFoodComponent = __decorate([
                     core_1.Component({
-                        selector: 'edit-food-details',
-                        inputs: ['food'],
-                        template: "\n    <div class=\"food-form\">\n      <h3>Edit Name:</h3>\n      <input [(ngModel)]=\"food.name\" class=\"col-sm-8 input-lg food-form\"\n      <h3>Edit Description: </h3>\n      <input [(ngModel)]=\"food.description\" class=\"col-sm-8 input-lg food-form\"\n      <h3>Edit Calories: </h3>\n      <input [(ngModel)]=\"food.calories\" class=\"col-sm-8 input-lg food-form\"\n  "
+                        selector: 'edit',
+                        inputs: ['food', 'foodList'],
+                        template: "\n    <div class=\"food-form\">\n      <h3>Edit Name:</h3>\n      <input [(ngModel)]=\"food.name\" class=\"col-sm-8 input-lg food-form\" />\n      <h3>Edit Description: </h3>\n      <input [(ngModel)]=\"food.description\" class=\"col-sm-8 input-lg food-form\" />\n      <h3>Edit Calories: </h3>\n      <input [(ngModel)]=\"food.calories\" class=\"col-sm-8 input-lg food-form\" />\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], EditFoodComponent);

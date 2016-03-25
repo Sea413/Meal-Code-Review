@@ -9,8 +9,8 @@ import { Food } from './food.model';
     <div class="container">
       <h1>Food List</h1>
       <food-list
-        [foodList]="Foods"
-        (onArmySelect)="foodWasSelected($event)">
+        [foodList]="foods"
+        (onFoodSelect)="foodWasSelected($event)">
       </food-list>
     <div>
   `

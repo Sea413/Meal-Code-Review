@@ -36,7 +36,7 @@ System.register(['angular2/core', './food.model'], function(exports_1, context_1
                     core_1.Component({
                         selector: 'new-food',
                         outputs: ['onSubmitNewFood'],
-                        template: "\n  <div class=\"food-form\">\n    <h3.Create Food:</h3>\n    <input placeholder=\"Name\" class=\"col-sm-8 input-lg\" #newName>\n    <input placeholder=\"Description\" class=\"col-sm-8 input-lg\" #newDescription>\n    <input placeholder=\"Calories\" class=\"col-sm-8 input-lg\" #newCalories>\n    <button (click)=\"addFood(newName, newDescription, newCalories)\">Add</button>\n  </div>\n  "
+                        template: "\n  <div class=\"food-form\">\n    <h3>Create Food:</h3>\n    <input placeholder=\"Name\" class=\"col-sm-8 input-lg\" #newName>\n    <input placeholder=\"Description\" class=\"col-sm-8 input-lg\" #newDescription>\n    <input placeholder=\"Calories\" class=\"col-sm-8 input-lg\" #newCalories>\n    <button (click)=\"addFood(newName, newDescription, newCalories)\">Add</button>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NewFoodComponent);

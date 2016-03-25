@@ -41,7 +41,7 @@ System.register(['angular2/core', './food-list.component', './food.model'], func
                     core_1.Component({
                         selector: 'my-app',
                         directives: [food_list_component_1.FoodListComponent],
-                        template: "\n    <div class=\"container\">\n      <h1>Food List</h1>\n      <food-list\n        [foodList]=\"Foods\"\n        (onArmySelect)=\"foodWasSelected($event)\">\n      </food-list>\n    <div>\n  "
+                        template: "\n    <div class=\"container\">\n      <h1>Food List</h1>\n      <food-list\n        [foodList]=\"foods\"\n        (onFoodSelect)=\"foodWasSelected($event)\">\n      </food-list>\n    <div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

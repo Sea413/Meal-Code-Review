@@ -5,26 +5,26 @@ import { EditFoodComponent } from './edit.component';
 import { HeavyPipe } from './heavy.pipe';
 import { NewFoodComponent } from './new-food.component';
 
-@Component ({
+@Component({
   selector: 'food-list',
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
   pipes: [HeavyPipe],
   directives: [FoodComponent, EditFoodComponent, NewFoodComponent],
   template: `
-  <select (change)="onChange($event.target.value)"
+  <select (change)="onChange($event.target.value)">
     <option value="all">Show All</option>
-    <option value="heavy"> Show Heavy Foods</option>
-    <option value="notHeavy">Show Lite Foods</option>
+    <option value="heavy">Show Heavy Food</option>
+    <option value="notHeavy">Lite Food</option>
   </select>
-  <food-display *ngFor ="currentFood of foodList | heavy:filterHeavy"
+  <food-display *ngFor="#currentFood of foodList | heavy:filterHeavy"
     (click)="foodClicked(currentFood)"
     [class.selected]="currentFood === selectedFood"
-    [food]="currentFood"
-  <food-display>
+    [food]="currentFood">
+  </food-display>
   <edit *ngIf="selectedFood" [food]="selectedFood" [foodList]="foodList">
   </edit>
-  <new-food (onSubmitnewFood)="createFood($event)"></new-food>
+  <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   <img src="../img/funny-food1.jpg" alt="Amusing Picture">
   `
 })
@@ -32,7 +32,7 @@ export class FoodListComponent {
   public foodList: Food[];
   public onFoodSelect:EventEmitter<Food>;
   public selectedFood: Food;
-  public filterHeavy: string ="notHeavy"
+  public filterHeavy: string = "notHeavy";
   constructor() {
     this.onFoodSelect = new EventEmitter();
   }
