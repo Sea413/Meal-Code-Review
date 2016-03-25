@@ -27,7 +27,7 @@ export class AppComponent {
     for(var i = 0; i < this.foods.length; i++) {
     console.log(this.foods[i].name);
   }
-  }
+}
   foodWasSelected(clickedFood: Food): void {
     console.log('parent', clickedFood);
   }
