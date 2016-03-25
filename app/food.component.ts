@@ -5,9 +5,9 @@ import { Food } from './food.model';
   selector: 'food-display',
   inputs: ['food'],
   template: `
-  <div>
-    <label>Food Name: {{food.name}} </label>
-  </div>
+    <div>
+      <label>Food Name: {{food.name}} </label>
+    </div>
   `
 })
 export class FoodComponent {
