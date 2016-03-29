@@ -14,13 +14,13 @@ import {HeavyPipe} from './heavy.pipe';
       <h4>Calories: {{ food.calories }}</h4>
 
       <h3>Edit Name:</h3>
-      <input [(ngModel)]="food.name" class="col-sm-6 input-lg food-form" />
+      <input [(ngModel)]="food.name" class="input-lg food-form" />
 
       <h3>Edit Description: </h3>
-      <input [(ngModel)]="food.description" class="col-sm-6 input-lg food-form" />
+      <input [(ngModel)]="food.description" class="input-lg food-form" />
 
       <h3>Edit Calories: </h3>
-      <input [(ngModel)]="food.calories" class="col-sm-6 input-lg food-form" />
+      <input [(ngModel)]="food.calories" class="input-lg food-form" />
       <br>
       <button (click)="changeStatus(food.calories)"> Confirm Edit</button>
       </div>
@@ -34,5 +34,8 @@ changeStatus(setCalories: number): void{
     if(setCalories > 300){
       this.food.heavy = true;
     }
+      else if(setCalories < 300) {
+        this.food.heavy =false;
+      }
+    }
   }
-}
